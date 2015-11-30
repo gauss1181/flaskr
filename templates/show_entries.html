@@ -15,7 +15,7 @@
     {% for entry in entries %}
         <li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}</li>
     {% else %}
-        <li><strong>No entries found.</strong></li>
+        <li><strong>No entries found</strong></li>
     {% endfor %}
     </ul>
 {% endblock %}
