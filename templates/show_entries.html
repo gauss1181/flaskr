@@ -12,7 +12,7 @@
         </form>
     {% endif %}
     <ul class=entries>
-    {% for entry in entries %}
+    {% for entry in entries %} <!-- | reverse %}-->
         <li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}</li>
     {% else %}
         <li><strong>No entries found</strong></li>

@@ -38,6 +38,19 @@ def show_entries():
     entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
     return render_template('show_entries.html', entries=entries)
 
+"""
+@app.template_filter('reverse')
+def reverse_filter(s):
+    return s[::-1]
+"""
+
+"""
+# Testing Jinja filters
+def reverse_filter(s):
+    return s[::-1]
+app.jinja_env.filters['reverse'] = reverse_filter
+"""
+
 @app.route('/add', methods=['POST'])
 def add_entry():
     if not session.get('logged_in'):
